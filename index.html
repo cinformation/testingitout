@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Snaps bij Cindy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Karla:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Permanent+Marker&display=swap">
+<style>
+/* Layout: a photographer's contact sheet — paper, a dark film strip of styles, red grease-pencil marks on the chosen frames */
+:root{
+  --paper:#E8EAE5; --surface:#F3F4F0; --ink:#151719; --muted:#5C615D; --line:#C6C9C2;
+  --pencil:#CF3328; --strip:#161817; --strip-ink:#E9E7DF; --edge:#E39A35;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"Karla","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:"Permanent Marker","Comic Sans MS",cursive;
+  --gutter-l:max(16px,env(safe-area-inset-left,0px));
+  --gutter-r:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111312; --surface:#191C1A; --ink:#E7E8E3; --muted:#9A9F99; --line:#2C302D;
+  --pencil:#FF5B4B; --strip:#0A0B0A; --strip-ink:#E9E7DF; --edge:#E9A447; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111312; --surface:#191C1A; --ink:#E7E8E3; --muted:#9A9F99; --line:#2C302D;
+  --pencil:#FF5B4B; --strip:#0A0B0A; --strip-ink:#E9E7DF; --edge:#E9A447; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:.95;margin:0;letter-spacing:.005em}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+
+/* header */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px}
+.mark{font-family:var(--f-display);font-weight:800;font-size:1.5rem;text-decoration:none;letter-spacing:.02em;text-transform:uppercase}
+.mark span{color:var(--pencil)}
+nav ul{display:flex;gap:4px 22px;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,88px)}
+.hero h1{font-weight:900;font-size:clamp(4.2rem,11vw,9.5rem);text-transform:uppercase;line-height:.84}
+.hero h1 em{font-style:normal;display:block;color:var(--pencil)}
+.hero .lede{max-width:34ch;font-size:1.2rem;color:var(--muted);margin:24px 0 0}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);font-size:.95rem}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn:hover{border-color:var(--pencil)}
+.btn.solid:hover{background:var(--pencil);color:#fff}
+
+.feature{position:relative;margin:0}
+.frame{position:relative;background:var(--strip);overflow:hidden;max-width:100%}
+.frame img{display:block;width:100%;height:100%;object-fit:cover}
+.feature .frame{aspect-ratio:3/2}
+.exif{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px;color:var(--muted)}
+.circle{position:absolute;inset:-7% -5% auto auto;width:46%;pointer-events:none;overflow:visible}
+.circle path{fill:none;stroke:var(--pencil);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:640;stroke-dashoffset:0;animation:draw 1.1s .35s ease-out backwards}
+.note{position:absolute;right:-2%;top:-15%;font-family:var(--f-hand);color:var(--pencil);font-size:1.35rem;transform:rotate(-8deg);pointer-events:none}
+@keyframes draw{from{stroke-dashoffset:640}}
+
+/* sections */
+section{scroll-margin-top:20px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:12px 24px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head h2{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;text-transform:uppercase}
+.sec-head p{margin:0;max-width:44ch;color:var(--muted)}
+
+/* film strip of styles */
+.strip{background:var(--strip);color:var(--strip-ink);padding-block:56px}
+.strip .sec-head p{color:#A9ABA4}
+.strip .eyebrow{color:var(--edge)}
+.film{position:relative;padding-block:26px;
+  background:
+    radial-gradient(circle,var(--paper) 0 0) 0 0/0 0,
+    repeating-linear-gradient(90deg,transparent 0 10px,#2a2c2a 10px 22px,transparent 22px 34px) top/100% 12px no-repeat,
+    repeating-linear-gradient(90deg,transparent 0 10px,#2a2c2a 10px 22px,transparent 22px 34px) bottom/100% 12px no-repeat}
+.film ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;list-style:none;margin:0;padding:0}
+.film li{display:flex;flex-direction:column;gap:12px;min-width:0}
+.film .edge{font-family:var(--f-mono);color:var(--edge);font-size:.7rem;letter-spacing:.12em;display:flex;justify-content:space-between}
+.film .frame{aspect-ratio:4/5;outline:1px solid #2a2c2a}
+.film h3{font-size:1.9rem;font-weight:800;text-transform:uppercase}
+.film p{margin:0;font-size:.95rem;color:#B9BBB4}
+.film .settings{color:var(--edge);opacity:.9}
+.film a.more{font-size:.9rem;font-weight:600;text-decoration:none;color:var(--strip-ink);border-bottom:1px solid var(--edge);align-self:flex-start}
+
+/* recent work */
+.work{padding-block:72px}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.grid figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.grid .frame{aspect-ratio:3/2}
+.grid .tall .frame{aspect-ratio:4/5}
+.g1{grid-column:span 4}.g2{grid-column:span 2}.g3,.g4{grid-column:span 3}
+.grid figcaption{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.92rem}
+.grid figcaption .mono{color:var(--muted)}
+.picked{position:relative}
+.picked::after{content:"";position:absolute;inset:-6px;border:2.5px solid var(--pencil);border-radius:46% 54% 50% 50%/52% 48% 52% 48%;transform:rotate(-1.5deg);pointer-events:none}
+
+/* blog */
+.blog{padding-block:64px;border-top:1px solid var(--line)}
+.posts{list-style:none;margin:0;padding:0}
+.post{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:8px 32px;align-items:baseline;padding-block:26px;border-bottom:1px solid var(--line)}
+.post:first-child{border-top:1px solid var(--line)}
+.post .meta{display:flex;flex-direction:column;gap:2px;color:var(--muted)}
+.post h3{font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:800}
+.post h3 a{text-decoration:none}
+.post h3 a:hover{color:var(--pencil)}
+.post p{margin:8px 0 0;color:var(--muted);max-width:62ch}
+.tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:3px 8px;white-space:nowrap}
+.allposts{margin-top:28px}
+
+/* about */
+.about{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);padding-block:64px;align-items:start}
+.about h2{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;text-transform:uppercase}
+.about p{margin:0 0 16px;max-width:60ch}
+.bag{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px;padding:0;list-style:none}
+.bag li{border-top:2px solid var(--ink);padding-top:10px;min-width:0}
+.bag b{display:block;font-family:var(--f-display);font-size:1.6rem;font-weight:800;line-height:1}
+.bag span{font-size:.88rem;color:var(--muted)}
+.contact{display:flex;gap:10px 18px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.contact code{font-family:var(--f-mono);font-size:.95rem;background:var(--paper);border:1px solid var(--line);padding:8px 12px;user-select:all}
+.copy{font:inherit;font-size:.9rem;font-weight:600;background:none;border:1.5px solid var(--ink);color:var(--ink);padding:7px 14px;cursor:pointer}
+.copy:hover{border-color:var(--pencil)}
+
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:28px;color:var(--muted);font-size:.9rem}
+
+@media (max-width:900px){
+  .hero .wrap,.about .wrap{grid-template-columns:minmax(0,1fr)}
+  .film ol{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g1{grid-column:span 2}.g2,.g3{grid-column:span 1}.g4{grid-column:span 2}
+  .grid .tall .frame{aspect-ratio:3/2}
+  .post{grid-template-columns:minmax(0,1fr)}
+  .post .meta{flex-direction:row;gap:14px}
+  .post .tag{justify-self:start}
+}
+@media (max-width:480px){
+  .film ol{grid-template-columns:minmax(0,1fr)}
+  .film .frame{aspect-ratio:3/2}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .g1,.g2,.g3,.g4{grid-column:span 1}
+  .bag{grid-template-columns:minmax(0,1fr)}
+  .note{font-size:1.1rem}
+}
+@media (prefers-reduced-motion:reduce){.circle path{animation:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Snaps <span>bij</span> Cindy</a>
+    <nav aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="#stijlen">Stijlen</a></li>
+        <li><a href="#werk">Recent werk</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#over">Over mij</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Portfolio · straatfotografie</p>
+        <h1>Snaps<em>bij Cindy</em></h1>
+        <p class="lede">Gewone mensen, gewone straten, en dat ene moment waarop licht en toeval samenvallen.</p>
+        <div class="cta">
+          <a class="btn solid" href="#werk">Bekijk het portfolio</a>
+          <a class="btn" href="#blog">Lees de blog</a>
+        </div>
+      </div>
+      <figure class="feature">
+        <div class="frame"><img src="foto/1.webp" alt="Een rode klassieke auto staat geparkeerd terwijl een lichte auto onscherp voorbij raast; op de stoep lopen twee jongens met spullen" width="1200" height="800"></div>
+        <svg class="circle" viewBox="0 0 200 160" aria-hidden="true"><path d="M150 18c-40-18-118-6-134 38-14 40 30 88 92 90 56 2 84-34 76-72-6-30-34-50-74-52"/></svg>
+        <span class="note" aria-hidden="true">deze!</span>
+        <figcaption class="exif mono"><span>Fr. 14A · Voorbij</span><span>Straat · lange sluitertijd</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="strip" id="stijlen">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Vier manieren van kijken</p>
+          <h2>Stijlen</h2>
+        </div>
+        <p>Meestal loop ik gewoon de straat op. Maar soms laat ik de sluiter langer open, wacht ik tot het donker is, of zoek ik alleen vorm en kleur.</p>
+      </div>
+      <div class="film">
+        <ol>
+          <li>
+            <div class="edge"><span>▸ 1</span><span>SNAPS 400</span></div>
+            <div class="frame"><img src="foto/3.webp" alt="Een arm hangt ontspannen uit het raam van een zilveren auto, half in de schaduw, half in fel zonlicht" width="1200" height="800" loading="lazy"></div>
+            <h3>Straat</h3>
+            <p>Spontane momenten tussen voorbijgangers. Niets geregisseerd, alles gezien.</p>
+            <span class="mono settings">1/250 s · f/8 · zone focus</span>
+            <a class="more" href="#werk">Bekijk serie</a>
+          </li>
+          <li>
+            <div class="edge"><span>▸ 2</span><span>SNAPS 400</span></div>
+            <div class="frame"><img src="foto/1.webp" alt="Een rode klassieke auto staat geparkeerd terwijl een lichte auto onscherp voorbij raast; op de stoep lopen twee jongens met spullen" width="1200" height="800" loading="lazy"></div>
+            <h3>Lange sluitertijd</h3>
+            <p>Verkeer wordt een lint van licht, mensen worden schimmen. De stad in beweging.</p>
+            <span class="mono settings">8 s · f/11 · ISO 100</span>
+            <a class="more" href="#werk">Bekijk serie</a>
+          </li>
+          <li>
+            <div class="edge"><span>▸ 3</span><span>SNAPS 400</span></div>
+            <div class="frame"><img src="foto/4.jpg" alt="Avondfeest op een plein: paarse lampionnen boven een menigte voor een verlicht podium" width="1200" height="800" loading="lazy"></div>
+            <h3>Avond</h3>
+            <p>Straatlantaarns, etalages en natte stoepen. Als het donker wordt, kiest het licht de onderwerpen.</p>
+            <span class="mono settings">1/60 s · f/1.8 · ISO 3200</span>
+            <a class="more" href="#werk">Bekijk serie</a>
+          </li>
+          <li>
+            <div class="edge"><span>▸ 4</span><span>SNAPS 400</span></div>
+            <div class="frame"><img src="foto/2.jpg" alt="Reflectie in een raam: een kok in een restaurantkeuken versmelt met de straat, een fiets en graffiti" width="1200" height="800" loading="lazy"></div>
+            <h3>Abstract</h3>
+            <p>Schaduwen, reflecties en lijnen. De stad teruggebracht tot vorm en kleur.</p>
+            <span class="mono settings">1/1000 s · f/5.6 · ISO 100</span>
+            <a class="more" href="#werk">Bekijk serie</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="werk">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Uit de laatste rolletjes</p>
+          <h2>Recent werk</h2>
+        </div>
+        <p>Een selectie van de afgelopen maanden. De rood omcirkelde foto is mijn favoriet.</p>
+      </div>
+      <div class="grid">
+        <figure class="g1">
+          <div class="frame"><img src="foto/4.jpg" alt="Avondfeest op een plein: paarse lampionnen boven een menigte voor een verlicht podium" width="1200" height="800" loading="lazy"></div>
+          <figcaption><span>Lampionnen boven de markt</span><span class="mono">Avond</span></figcaption>
+        </figure>
+        <figure class="g2 tall">
+          <div class="frame picked"><img src="foto/3.webp" alt="Een arm hangt ontspannen uit het raam van een zilveren auto, half in de schaduw, half in fel zonlicht" width="1200" height="800" loading="lazy"></div>
+          <figcaption><span>Arm uit het raam</span><span class="mono">Straat</span></figcaption>
+        </figure>
+        <figure class="g3">
+          <div class="frame"><img src="foto/1.webp" alt="Een rode klassieke auto staat geparkeerd terwijl een lichte auto onscherp voorbij raast; op de stoep lopen twee jongens met spullen" width="1200" height="800" loading="lazy"></div>
+          <figcaption><span>Voorbij</span><span class="mono">Lange sluitertijd</span></figcaption>
+        </figure>
+        <figure class="g4">
+          <div class="frame"><img src="foto/2.jpg" alt="Reflectie in een raam: een kok in een restaurantkeuken versmelt met de straat, een fiets en graffiti" width="1200" height="800" loading="lazy"></div>
+          <figcaption><span>Keuken en straat in één ruit</span><span class="mono">Abstract</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" id="blog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Verhalen achter de foto's</p>
+          <h2>Blog</h2>
+        </div>
+        <p>Over techniek, over wandelingen en over de foto's die bijna mislukten.</p>
+      </div>
+      <ol class="posts">
+        <li class="post">
+          <div class="meta mono"><span>12 okt 2026</span><span>6 min lezen</span></div>
+          <div>
+            <h3><a href="#blog">Lange sluitertijd zonder statief: zo doe ik het in de stad</a></h3>
+            <p>Een bankje, een prullenbak of gewoon de stoeprand. Mijn trucs om scherp te blijven terwijl de rest van de wereld vervaagt.</p>
+          </div>
+          <span class="tag">Techniek</span>
+        </li>
+        <li class="post">
+          <div class="meta mono"><span>28 sep 2026</span><span>4 min lezen</span></div>
+          <div>
+            <h3><a href="#blog">Een avond op het station</a></h3>
+            <p>Drie uur op één perron, tweehonderd foto's en uiteindelijk één beeld waar ik echt blij mee ben. Over geduld en tl-licht.</p>
+          </div>
+          <span class="tag">Avond</span>
+        </li>
+        <li class="post">
+          <div class="meta mono"><span>9 sep 2026</span><span>5 min lezen</span></div>
+          <div>
+            <h3><a href="#blog">Waarom ik mensen niet om toestemming vraag (en wanneer wel)</a></h3>
+            <p>Straatfotografie en privacy. Hoe ik omga met vreemden voor mijn lens, en wat ik doe als iemand liever niet op de foto wil.</p>
+          </div>
+          <span class="tag">Straat</span>
+        </li>
+      </ol>
+      <a class="btn allposts" href="#blog">Alle artikelen</a>
+    </div>
+  </section>
+
+  <section class="about" id="over">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Achter de camera</p>
+        <h2>Over mij</h2>
+      </div>
+      <div>
+        <p>Ik ben Cindy. Met een camera om mijn nek loop ik door de stad, op zoek naar kleine momenten die de meeste mensen voorbij laten gaan: een schaduw die precies goed valt, iemand die even omkijkt, een plas die de lucht weerspiegelt.</p>
+        <p>Straatfotografie is mijn basis. Daarnaast experimenteer ik graag met lange sluitertijden, avondfotografie en abstracte beelden.</p>
+        <ul class="bag">
+          <li><b>28 mm</b><span>Mijn vaste brandpuntsafstand</span></li>
+          <li><b>4</b><span>Stijlen in het portfolio</span></li>
+          <li><b>Altijd</b><span>Een camera in mijn tas</span></li>
+        </ul>
+        <div class="contact">
+          <code id="mail">hallo@snapsbijcindy.nl</code>
+          <button class="copy" id="copyMail" type="button">Kopieer e-mailadres</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Snaps bij Cindy. Alle foto's zijn auteursrechtelijk beschermd.</span>
+    <span class="mono">Fr. 36 · einde rol</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('copyMail'),mail=document.getElementById('mail');
+  btn.addEventListener('click',function(){
+    function fallback(){var s=window.getSelection(),rg=document.createRange();rg.selectNodeContents(mail);s.removeAllRanges();s.addRange(rg);btn.textContent='Geselecteerd, druk op kopiëren'}
+    try{navigator.clipboard.writeText(mail.textContent).then(function(){btn.textContent='Gekopieerd'},fallback)}catch(e){fallback()}
+  });
+})();
+</script>
+
+</body>
+</html>
