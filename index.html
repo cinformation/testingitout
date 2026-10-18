@@ -29,6 +29,9 @@
   --pencil:#FF5B4B; --strip:#0A0B0A; --strip-ink:#E9E7DF; --edge:#E9A447; color-scheme:dark}
 
 *{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
@@ -171,8 +174,8 @@ section{scroll-margin-top:20px}
     <a class="mark" href="#top">Snaps <span>bij</span> Cindy</a>
     <nav aria-label="Hoofdmenu">
       <ul>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="#stijlen">Stijlen</a></li>
-        <li><a href="#werk">Recent werk</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#over">Over mij</a></li>
       </ul>
@@ -188,7 +191,7 @@ section{scroll-margin-top:20px}
         <h1>Snaps<em>bij Cindy</em></h1>
         <p class="lede">Gewone mensen, gewone straten, en dat ene moment waarop licht en toeval samenvallen.</p>
         <div class="cta">
-          <a class="btn solid" href="#werk">Bekijk het portfolio</a>
+          <a class="btn solid" href="portfolio.html">Bekijk het portfolio</a>
           <a class="btn" href="#blog">Lees de blog</a>
         </div>
       </div>
@@ -218,7 +221,7 @@ section{scroll-margin-top:20px}
             <h3>Straat</h3>
             <p>Spontane momenten tussen voorbijgangers. Niets geregisseerd, alles gezien.</p>
             <span class="mono settings">1/250 s · f/8 · zone focus</span>
-            <a class="more" href="#werk">Bekijk serie</a>
+            <a class="more" href="portfolio.html#straat">Bekijk serie</a>
           </li>
           <li>
             <div class="edge"><span>▸ 2</span><span>SNAPS 400</span></div>
@@ -226,7 +229,7 @@ section{scroll-margin-top:20px}
             <h3>Lange sluitertijd</h3>
             <p>Verkeer wordt een lint van licht, mensen worden schimmen. De stad in beweging.</p>
             <span class="mono settings">8 s · f/11 · ISO 100</span>
-            <a class="more" href="#werk">Bekijk serie</a>
+            <a class="more" href="portfolio.html#lange-sluitertijd">Bekijk serie</a>
           </li>
           <li>
             <div class="edge"><span>▸ 3</span><span>SNAPS 400</span></div>
@@ -234,7 +237,7 @@ section{scroll-margin-top:20px}
             <h3>Avond</h3>
             <p>Straatlantaarns, etalages en natte stoepen. Als het donker wordt, kiest het licht de onderwerpen.</p>
             <span class="mono settings">1/60 s · f/1.8 · ISO 3200</span>
-            <a class="more" href="#werk">Bekijk serie</a>
+            <a class="more" href="portfolio.html#avond">Bekijk serie</a>
           </li>
           <li>
             <div class="edge"><span>▸ 4</span><span>SNAPS 400</span></div>
@@ -242,7 +245,7 @@ section{scroll-margin-top:20px}
             <h3>Abstract</h3>
             <p>Schaduwen, reflecties en lijnen. De stad teruggebracht tot vorm en kleur.</p>
             <span class="mono settings">1/1000 s · f/5.6 · ISO 100</span>
-            <a class="more" href="#werk">Bekijk serie</a>
+            <a class="more" href="portfolio.html#abstract">Bekijk serie</a>
           </li>
         </ol>
       </div>
@@ -276,6 +279,7 @@ section{scroll-margin-top:20px}
           <figcaption><span>Keuken en straat in één ruit</span><span class="mono">Abstract</span></figcaption>
         </figure>
       </div>
+      <a class="btn allposts" href="portfolio.html">Bekijk het hele portfolio</a>
     </div>
   </section>
 
@@ -352,7 +356,7 @@ section{scroll-margin-top:20px}
         <h4 class="eyebrow">Menu</h4>
         <ul>
           <li><a href="#top">Home</a></li>
-          <li><a href="#werk">Portfolio</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#over">Over mij</a></li>
           <li><a href="#over">Contact</a></li>
@@ -361,10 +365,10 @@ section{scroll-margin-top:20px}
       <nav class="foot-col" aria-label="Stijlen">
         <h4 class="eyebrow">Stijlen</h4>
         <ul>
-          <li><a href="#stijlen">Straat</a></li>
-          <li><a href="#stijlen">Lange sluitertijd</a></li>
-          <li><a href="#stijlen">Avond</a></li>
-          <li><a href="#stijlen">Abstract</a></li>
+          <li><a href="portfolio.html#straat">Straat</a></li>
+          <li><a href="portfolio.html#lange-sluitertijd">Lange sluitertijd</a></li>
+          <li><a href="portfolio.html#avond">Avond</a></li>
+          <li><a href="portfolio.html#abstract">Abstract</a></li>
         </ul>
       </nav>
       <div class="foot-col">
