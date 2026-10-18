@@ -26,6 +26,14 @@ Een nieuwe foto zet je dus **bovenaan** in `fotos.js`. Pas de homepagina niet me
    `breedte`, `hoogte` en een beschrijvende `alt`-tekst.
 5. Commit en push naar `main`.
 
+## Afspraken bijhouden in dit bestand
+
+- Spreken Cindy en Claude een nieuwe werkwijze, voorkeur of vaste regel af, stel dan meteen voor om die hier toe te voegen.
+  Na akkoord: werk dit bestand bij, commit en push naar `main`. Alleen wat hier op GitHub staat, blijft bewaard voor een volgende sessie.
+- Cindy wil liever te veel dan te weinig vastgelegd hebben. Twijfel je of iets een afspraak is, stel dan voor om het op te nemen.
+- Schrijf afspraken in gewone, concrete taal en zet ze onder een passend kopje. Verander of verwijder bestaande afspraken alleen als Cindy dat vraagt.
+- Cindy kan dit bestand ook zelf aanpassen. Volg altijd de nieuwste versie.
+
 ## Voorbeeldweergave
 
 Er bestaat ook een voorbeeldpagina op claude.ai: https://claude.ai/artifact/QB8dBjgH9gDxF2ESHvRekw
