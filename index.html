@@ -50,6 +50,7 @@ nav a{text-decoration:none;font-size:.95rem;color:var(--muted)}
 nav a:hover{color:var(--ink)}
 
 /* hero */
+.hero{overflow-x:clip}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,88px)}
 .hero h1{font-weight:900;font-size:clamp(4.2rem,11vw,9.5rem);text-transform:uppercase;line-height:.84}
 .hero h1 em{font-style:normal;display:block;color:var(--pencil)}
@@ -98,7 +99,8 @@ section{scroll-margin-top:20px}
 .work{padding-block:72px}
 .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
 .grid figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
-.grid .frame{aspect-ratio:3/2}
+.grid .frame{aspect-ratio:3/2;display:block}
+.grid a.frame:focus-visible{outline:2px solid var(--pencil);outline-offset:3px}
 .grid .tall .frame{aspect-ratio:4/5}
 .g1{grid-column:span 4}.g2{grid-column:span 2}.g3,.g4{grid-column:span 3}
 .grid figcaption{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.92rem}
@@ -259,26 +261,9 @@ section{scroll-margin-top:20px}
           <p class="eyebrow">Uit de laatste rolletjes</p>
           <h2>Recent werk</h2>
         </div>
-        <p>Een selectie van de afgelopen maanden. De rood omcirkelde foto is mijn favoriet.</p>
+        <p>De vier nieuwste foto's uit mijn portfolio.</p>
       </div>
-      <div class="grid">
-        <figure class="g1">
-          <div class="frame"><img src="foto/4.jpg" alt="Avondfeest op een plein: paarse lampionnen boven een menigte voor een verlicht podium" width="1200" height="800" loading="lazy"></div>
-          <figcaption><span>Lampionnen boven de markt</span><span class="mono">Avond</span></figcaption>
-        </figure>
-        <figure class="g2 tall">
-          <div class="frame picked"><img src="foto/3.webp" alt="Een arm hangt ontspannen uit het raam van een zilveren auto, half in de schaduw, half in fel zonlicht" width="1200" height="800" loading="lazy"></div>
-          <figcaption><span>Arm uit het raam</span><span class="mono">Straat</span></figcaption>
-        </figure>
-        <figure class="g3">
-          <div class="frame"><img src="foto/1.webp" alt="Een rode klassieke auto staat geparkeerd terwijl een lichte auto onscherp voorbij raast; op de stoep lopen twee jongens met spullen" width="1200" height="800" loading="lazy"></div>
-          <figcaption><span>Voorbij</span><span class="mono">Lange sluitertijd</span></figcaption>
-        </figure>
-        <figure class="g4">
-          <div class="frame"><img src="foto/2.jpg" alt="Reflectie in een raam: een kok in een restaurantkeuken versmelt met de straat, een fiets en graffiti" width="1200" height="800" loading="lazy"></div>
-          <figcaption><span>Keuken en straat in één ruit</span><span class="mono">Abstract</span></figcaption>
-        </figure>
-      </div>
+      <div class="grid" id="recentGrid"></div>
       <a class="btn allposts" href="portfolio.html">Bekijk het hele portfolio</a>
     </div>
   </section>
@@ -393,6 +378,19 @@ section{scroll-margin-top:20px}
   </div>
 </footer>
 
+<script src="fotos.js"></script>
+<script>
+(function(){
+  var F=(window.SNAPS_FOTOS||[]).slice(0,4),S=window.SNAPS_STIJLEN||{},g=document.getElementById('recentGrid');
+  if(!g)return;
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  g.innerHTML=F.map(function(f,i){
+    return '<figure class="g'+(i+1)+(i===1?' tall':'')+'"><a class="frame" href="portfolio.html" aria-label="'+esc(f.titel)+' in het portfolio">'+
+      '<img src="foto/'+esc(f.bestand)+'" alt="'+esc(f.alt)+'" width="'+f.breedte+'" height="'+f.hoogte+'" loading="lazy"></a>'+
+      '<figcaption><span>'+esc(f.titel)+'</span><span class="mono">'+esc(f.stijlen.map(function(s){return S[s]||s}).join(' · '))+'</span></figcaption></figure>';
+  }).join('');
+})();
+</script>
 <script>
 (function(){
   var btn=document.getElementById('copyMail'),mail=document.getElementById('mail');

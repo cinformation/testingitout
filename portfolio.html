@@ -225,62 +225,16 @@ nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--pencil
 <main id="top">
   <section class="pf-intro">
     <div class="wrap">
-      <p class="eyebrow">Portfolio · 10 foto's</p>
+      <p class="eyebrow">Portfolio · <span id="pfCount"></span></p>
       <h1>Portfolio</h1>
       <p class="lede">Een selectie uit mijn werk op straat. Kies een stijl om te filteren, of klik op een foto om hem groot te bekijken.</p>
-      <div class="filters" role="group" aria-label="Filter op stijl">
-          <button class="chip" type="button" data-filter="alle" aria-pressed="true">Alle <span class="mono">10</span></button>
-          <button class="chip" type="button" data-filter="straat" aria-pressed="false">Straat <span class="mono">6</span></button>
-          <button class="chip" type="button" data-filter="lange-sluitertijd" aria-pressed="false">Lange sluitertijd <span class="mono">5</span></button>
-          <button class="chip" type="button" data-filter="avond" aria-pressed="false">Avond <span class="mono">3</span></button>
-          <button class="chip" type="button" data-filter="abstract" aria-pressed="false">Abstract <span class="mono">3</span></button>
-      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter op stijl"></div>
     </div>
   </section>
 
   <section aria-label="Foto's">
     <div class="wrap">
       <div class="gallery" id="gallery">
-      <figure class="shot" data-tags="avond">
-        <button class="thumb" type="button" aria-label="Open foto: Donderdagavond Sneekweek"><img src="foto/sneekweek-donderdagavond.jpg" alt="Een uitzinnig publiek steekt de handen in de lucht voor een podium vol geel licht, rook en rondvliegende ballen" width="1568" height="1252"></button>
-        <figcaption><span class="fr mono">Fr. 01</span><span class="t">Donderdagavond Sneekweek</span><span class="tags mono">Avond</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="lange-sluitertijd">
-        <button class="thumb" type="button" aria-label="Open foto: Draaimolen"><img src="foto/draaimolen.jpg" alt="Een kinderdraaimolen met een oranje autootje, een wit paardje en een blauw bootje, vervaagd door de beweging" width="1526" height="1016"></button>
-        <figcaption><span class="fr mono">Fr. 02</span><span class="t">Draaimolen</span><span class="tags mono">Lange sluitertijd</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="lange-sluitertijd straat">
-        <button class="thumb" type="button" aria-label="Open foto: Fietser langs het witte huis"><img src="foto/5.jpg" alt="Een fietser rijdt onscherp voorbij een wit hoekhuis met een rood pannendak; op de achtergrond staan mensen bij een terras" width="927" height="1156"></button>
-        <figcaption><span class="fr mono">Fr. 03</span><span class="t">Fietser langs het witte huis</span><span class="tags mono">Lange sluitertijd · Straat</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="avond abstract">
-        <button class="thumb" type="button" aria-label="Open foto: Café in Sneek"><img src="foto/cafe-sneek.jpg" alt="Door een raam vol regendruppels gloeien de warme lampjes van een café in het donker" width="925" height="1186" loading="lazy"></button>
-        <figcaption><span class="fr mono">Fr. 04</span><span class="t">Café in Sneek</span><span class="tags mono">Avond · Abstract</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="lange-sluitertijd straat">
-        <button class="thumb" type="button" aria-label="Open foto: Voorbij"><img src="foto/1.webp" alt="Een rode klassieke auto staat geparkeerd terwijl een lichte auto onscherp voorbij raast; op de stoep lopen twee jongens met spullen" width="1200" height="800" loading="lazy"></button>
-        <figcaption><span class="fr mono">Fr. 05</span><span class="t">Voorbij</span><span class="tags mono">Lange sluitertijd · Straat</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="lange-sluitertijd straat">
-        <button class="thumb" type="button" aria-label="Open foto: Draaimolen op het Starteiland"><img src="foto/draaimolen-starteiland.jpg" alt="Gele stoeltjes van een zweefmolen zwieren vaag door een blauwe lucht, terwijl toeschouwers scherp op de grond staan te kijken" width="1594" height="1273" loading="lazy"></button>
-        <figcaption><span class="fr mono">Fr. 06</span><span class="t">Draaimolen op het Starteiland</span><span class="tags mono">Lange sluitertijd · Straat</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="avond">
-        <button class="thumb" type="button" aria-label="Open foto: Lampionnen boven de markt"><img src="foto/4.jpg" alt="Avondfeest op een plein: paarse lampionnen boven een menigte voor een verlicht podium" width="1024" height="804" loading="lazy"></button>
-        <figcaption><span class="fr mono">Fr. 07</span><span class="t">Lampionnen boven de markt</span><span class="tags mono">Avond</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="straat abstract">
-        <button class="thumb" type="button" aria-label="Open foto: Arm uit het raam"><img src="foto/3.webp" alt="Een arm hangt ontspannen uit het raam van een zilveren auto, half in de schaduw, half in fel zonlicht" width="1024" height="819" loading="lazy"></button>
-        <figcaption><span class="fr mono">Fr. 08</span><span class="t">Arm uit het raam</span><span class="tags mono">Straat · Abstract</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="lange-sluitertijd straat">
-        <button class="thumb" type="button" aria-label="Open foto: Churros"><img src="foto/6.jpg" alt="Een kermiskraam met een verlicht Churros-bord; voorbijgangers op de voorgrond zijn vervaagd door de lange sluitertijd" width="1482" height="1205" loading="lazy"></button>
-        <figcaption><span class="fr mono">Fr. 09</span><span class="t">Churros</span><span class="tags mono">Lange sluitertijd · Straat</span></figcaption>
-      </figure>
-      <figure class="shot" data-tags="abstract straat">
-        <button class="thumb" type="button" aria-label="Open foto: Keuken en straat in één ruit"><img src="foto/2.jpg" alt="Reflectie in een raam: een kok in een restaurantkeuken versmelt met de straat, een fiets en graffiti" width="1024" height="832" loading="lazy"></button>
-        <figcaption><span class="fr mono">Fr. 10</span><span class="t">Keuken en straat in één ruit</span><span class="tags mono">Abstract · Straat</span></figcaption>
-      </figure>
       </div>
       <p class="empty" id="empty" hidden>Nog geen foto's in deze stijl.</p>
     </div>
@@ -345,6 +299,26 @@ nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--pencil
   </div>
 </footer>
 
+<script src="fotos.js"></script>
+<script>
+(function(){
+  var F=window.SNAPS_FOTOS||[],S=window.SNAPS_STIJLEN||{};
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  document.getElementById('pfCount').textContent=F.length+" foto's";
+  var chips='<button class="chip" type="button" data-filter="alle" aria-pressed="true">Alle <span class="mono">'+F.length+'</span></button>';
+  Object.keys(S).forEach(function(k){
+    var n=F.filter(function(f){return f.stijlen.indexOf(k)>-1}).length;
+    chips+='<button class="chip" type="button" data-filter="'+k+'" aria-pressed="false">'+esc(S[k])+' <span class="mono">'+n+'</span></button>';
+  });
+  document.getElementById('filters').innerHTML=chips;
+  document.getElementById('gallery').innerHTML=F.map(function(f,i){
+    var nr=('0'+(i+1)).slice(-2);
+    return '<figure class="shot" data-tags="'+esc(f.stijlen.join(' '))+'">'+
+      '<button class="thumb" type="button" aria-label="Open foto: '+esc(f.titel)+'"><img src="foto/'+esc(f.bestand)+'" alt="'+esc(f.alt)+'" width="'+f.breedte+'" height="'+f.hoogte+'"'+(i>2?' loading="lazy"':'')+'></button>'+
+      '<figcaption><span class="fr mono">Fr. '+nr+'</span><span class="t">'+esc(f.titel)+'</span><span class="tags mono">'+esc(f.stijlen.map(function(s){return S[s]||s}).join(' · '))+'</span></figcaption></figure>';
+  }).join('');
+})();
+</script>
 <script>
 (function(){
   var shots=[].slice.call(document.querySelectorAll('.shot')),chips=[].slice.call(document.querySelectorAll('.chip'));
