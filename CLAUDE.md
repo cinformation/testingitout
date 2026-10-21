@@ -1,7 +1,12 @@
-# Snaps bij Cindy
+# Snaps by Cindy
 
 Portfoliowebsite voor straatfotografie van Cindy. Statische HTML, geen build-stap.
 Alle tekst op de site is in het Nederlands.
+
+## Naam van de site
+
+- De site heet **Snaps by Cindy** (met "by", omdat "snaps" ook Engels is). Gebruik deze schrijfwijze overal: kop, logo, tabbladtitel en footer.
+- De rest van de tekst op de site blijft gewoon Nederlands.
 
 ## Bestanden
 
