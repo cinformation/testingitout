@@ -3,6 +3,7 @@
 // De homepagina toont automatisch de eerste 4; portfolio.html toont ze allemaal.
 // stijlen: "straat", "lange-sluitertijd", "avond", "abstract" (een of meer).
 window.SNAPS_FOTOS = [
+  {"bestand": "din.jpg", "titel": "Din", "stijlen": ["straat"], "breedte": 1024, "hoogte": 818, "alt": "Iemand sjouwt een enorme gele knuffeldino langs een felrode gevel, terwijl een man met rugzak en een kinderwagen voorbijkomen"},
   {"bestand": "sneekweek-donderdagavond.jpg", "titel": "Donderdagavond Sneekweek", "stijlen": ["avond"], "breedte": 1568, "hoogte": 1252, "alt": "Een uitzinnig publiek steekt de handen in de lucht voor een podium vol geel licht, rook en rondvliegende ballen"},
   {"bestand": "draaimolen.jpg", "titel": "Draaimolen", "stijlen": ["lange-sluitertijd"], "breedte": 1526, "hoogte": 1016, "alt": "Een kinderdraaimolen met een oranje autootje, een wit paardje en een blauw bootje, vervaagd door de beweging"},
   {"bestand": "5.jpg", "titel": "Fietser langs het witte huis", "stijlen": ["lange-sluitertijd", "straat"], "breedte": 927, "hoogte": 1156, "alt": "Een fietser rijdt onscherp voorbij een wit hoekhuis met een rood pannendak; op de achtergrond staan mensen bij een terras"},
